@@ -1,0 +1,112 @@
+﻿body {
+   
+   margin-right: 10%;
+   margin-left: 10%;
+   margin-top: 40px;
+   padding: 50px;
+   overflow: scroll;
+   
+}
+body:after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background: -webkit-linear-gradient(top, rgba(42,27,108,0.71) 35%, rgba(255,123,40,0.74) 50%, rgba(170,2,10,0.73) 100%), url('bakgrunn2.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+
+}
+#myContVann {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: lightblue;
+}
+#myAniVann {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  background-color: blue;
+}
+
+#myContSult {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: lightgreen;
+}
+#myAniSult {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  background-color: green;
+}
+#myContTrett {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: lightgrey;
+}
+#myAniTrett {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  background-color: grey;
+}
+#myContToalett {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: #f4ff89;
+}
+#myAniToalett {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  background-color: yellow;
+}
+#myContHelse {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: #ff7169;
+}
+#myAniHelse {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  background-color: red;
+}
+#myContAlder {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: #cc73ff;
+}
+#myAniAlder {
+  width: 0px;
+  height: 35px;
+  position: absolute;
+  background-color: purple;
+}
+#myContValg {
+  width: 800px;
+  height: 35px;
+  position: relative;
+  background: violet;
+}
+#myAniValg {
+  width: 0px;
+  height: 35px;
+  position: absolute;
+  background-color: magenta;
+}
