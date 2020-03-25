@@ -1,0 +1,86 @@
+﻿body{
+color: #313131;
+background-color: black;
+font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-left: 20px;
+margin-top: 20px;
+overflow: scroll;
+}
+h3{
+color: white;
+margin-top: 20px;
+margin-left: 20px;
+
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.can{
+width: 200px;
+height: 100px;
+
+}
+#hund{
+float: right;
+  width: 33.33%;
+}
+#hund2{
+float: right;
+width: 33%;
+}
+#hund3{
+float: right;
+font-size: 20px;
+width: 33%;
+}
+#hund4{
+float: right;
+font-size: 25px;
+width: 50%;
+}
+#hund5{
+margin-left: 400px;
+margin-top: 40px;
+font-size: 10px;
+}
+#hund6{
+font-size: 15px;
+margin-left: 300px;
+}
