@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title></title>
+    <link rel="stylesheet" href="klikke4.css" type="text/css" media="screen">
+    <script type="text/javascript" src="include.js"></script>
+  </head>
+  <body>
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Meny</button>
+  <div id="myDropdown" class="dropdown-content">
+   <a href="fortsettelse.html">Fortsettelse</a>
+    <a href="mysterie.html"> Mysterie </a>
+  </div>
+</div>
+<button onclick="tekstKlikk()" class="btn"> Klikk meg! </button>
+<div id="kodeTekst"> </div>
+<script>
+ 
+
+var kode = 0;
+function morse(){  
+console.log(kode);
+  if(kode == 3){
+    document.getElementById("kodeTekst").innerHTML = "Kaktus";
+    kode+=1;
+  } else if(kode<=8 && kode>=6){
+    document.getElementById("kodeTekst").innerHTML = "gris";
+    kode+=1;
+  } else if(kode == 11){
+    document.getElementById("kodeTekst").innerHTML = "vannmelon";
+    kode+=1;
+  }else if(kode == 14){
+    document.getElementById("kodeTekst").innerHTML = "ku";
+    kode+=1;
+  }else if(kode<=20 && kode>=18){
+    document.getElementById("kodeTekst").innerHTML = "Gresskar";
+    kode+=1;
+  } else if(kode<=25 && kode>=23){
+    document.getElementById("kodeTekst").innerHTML = "katt";
+    kode+=1;
+  } else if(kode<=30 && kode>=28){
+    document.getElementById("kodeTekst").innerHTML = "kylling";
+    kode+=1;
+  } else if(kode<=36 && kode>=34){
+    document.getElementById("kodeTekst").innerHTML = "Planke";
+    kode+=1;
+  }else if(kode == 39){
+    document.getElementById("kodeTekst").innerHTML = "zombie";
+    kode+=1;
+  }else if(kode == 42){
+    document.getElementById("kodeTekst").innerHTML = "hakke";
+    kode+=1;
+  }else if(kode<=47 && kode>=45){
+    document.getElementById("kodeTekst").innerHTML = "is";
+    kode+=1;
+  }else if(kode<=53 && kode>=51){
+    document.getElementById("kodeTekst").innerHTML = "Gulrot";
+    kode+=1;
+  }else if(kode<=58 && kode>=56){
+    document.getElementById("kodeTekst").innerHTML = "øks";
+    kode+=1;
+  }else if(kode<=63 && kode>=61){
+    document.getElementById("kodeTekst").innerHTML = "gress";
+    kode+=1;
+  }else if(kode<=69 && kode>=67){
+    document.getElementById("kodeTekst").innerHTML = "Sand";
+    kode+=1;
+  }else if(kode == 72){
+    document.getElementById("kodeTekst").innerHTML = "llama";
+    kode+=1;
+  }else if(kode == 75){
+    document.getElementById("kodeTekst").innerHTML = "sverd";
+    kode+=1;
+  }else if(kode == 79){
+    document.getElementById("kodeTekst").innerHTML = "Terracotta";
+    kode+=1;
+  }else if(kode<=84 && kode>=82){
+    document.getElementById("kodeTekst").innerHTML = "murstein";
+    kode+=1;
+  }else if(kode == 87){
+    document.getElementById("kodeTekst").innerHTML = "vann";
+    kode+=1;
+  }else if(kode<=93 && kode>=91){
+    document.getElementById("kodeTekst").innerHTML = "Kakao";
+    kode+=1;
+  }else if(kode<=98 && kode>=96){
+    document.getElementById("kodeTekst").innerHTML = "papegøye";
+    kode+=1;
+  }else if(kode<=103 && kode>=101){
+    document.getElementById("kodeTekst").innerHTML = "solsikke";
+    kode+=1;
+  }else if(kode<=109 && kode>=107){
+    document.getElementById("kodeTekst").innerHTML = "Bok";
+    kode+=1;
+  }else if(kode<=114 && kode>=112){
+    document.getElementById("kodeTekst").innerHTML = "eliksir";
+    kode+=1;
+  }else if(kode<=120 && kode>=118){
+    document.getElementById("kodeTekst").innerHTML = "Ovn";
+    kode+=1;
+  }
+  else{
+  document.getElementById("kodeTekst").innerHTML = "";
+  kode+=1;
+  }
+  
+}
+function tekstKlikk(){
+ setInterval(morse, 500);
+}
+
+
+</script>
+  </body>
+</html>
