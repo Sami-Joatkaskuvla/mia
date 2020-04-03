@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title></title>
+    <link rel="stylesheet" href="klikke4.css" type="text/css" media="screen">
+    <script type="text/javascript" src="include.js"></script>
+  </head>
+  <body>
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Meny</button>
+  <div id="myDropdown" class="dropdown-content">
+   <a href="fortsettelse.html">Fortsettelse</a>
+    <a href="mysterie.html">Mysterie</a>
+  <a href="hvilken.html"> Hvilken? </a>
+  <a href="oppskrift.html"> Oppskrift </a>
+  </div>
+</div>
+<div id="skjultDiv"> Lag småkakene</div>
+  <h2> Småkaker </h2>
+  <p> Nok til 23 småkaker. </p>
+  <p> 500 g smør   </p>
+  <p> 200 g sukker  </p>
+  <p> Bland sammen med miksmaster. </p>
+  <p> 6 egg </p>
+  <p> Tilsett en om gangen. </p>
+  <p> 100 g speltmel </p>
+  <p> 2 ss natron </p>
+  <p> Brett inn.  </p>
+  <p> 3 dl sukker </p>
+  <p> Ha sukkeret på deigen før de stekes </p>
+  <p> Stek i 130 grader i 14 minutter. </p>
+<button onclick="oppTrykk()" class="oppBtn"> Småkaker </button>
+  <script>
+  var trykk = 0;
+  var x = document.getElementById("skjultDiv");
+  x.style.display = "none";
+  function oppTrykk(){
+    trykk += 1;
+    console.log(trykk);
+    if(trykk == 23){
+       x.style.display = "block";
+       
+    }
+  }
+  </script>
+  </body>
+</html>
