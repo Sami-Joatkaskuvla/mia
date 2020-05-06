@@ -5,48 +5,48 @@
     <link rel="stylesheet" href="klikke1.css" type="text/css" media="screen">
     <title>Etnyttliv</title>
   </head>
-  <body>
+<body>
   <h1> Ditt liv </h1>
-
 <h4> Alder </h4>
-<div id ="myContAlder">
-<div id ="myAniAlder"></div>
-</div>
+  <div id ="myContAlder">
+    <div id ="myAniAlder"></div>
+  </div>
+
 <h4> Tørste </h4>
-<div id ="myContVann">
-<div id ="myAniVann"></div>
-</div>
-<button onclick="drikk()"> Drikk </button>
+  <div id ="myContVann">
+    <div id ="myAniVann"></div>
+  </div>
+  <button onclick="drikk()"> Drikk </button>
 
 <h4> Sult </h4>
-<div id ="myContSult">
-<div id ="myAniSult"></div>
-</div>
-<button onclick="spis()"> Spis </button>
+  <div id ="myContSult">
+    <div id ="myAniSult"></div>
+  </div>
+  <button onclick="spis()"> Spis </button>
 
 <h4> Tretthet </h4>
-<div id ="myContTrett">
-<div id ="myAniTrett"></div>
-</div>
-<button onclick="sov()"> Sov </button>
+  <div id ="myContTrett">
+    <div id ="myAniTrett"></div>
+  </div>
+  <button onclick="sov()"> Sov </button>
 
 <h4> Må på toalett </h4>
-<div id ="myContToalett">
-<div id ="myAniToalett"></div>
-</div>
-<button onclick="besook()"> Toalettbesøk </button>
+  <div id ="myContToalett">
+    <div id ="myAniToalett"></div>
+  </div>
+  <button onclick="besook()"> Toalettbesøk </button>
 
 <h4> Dårlig helse </h4>
-<div id ="myContHelse">
-<div id ="myAniHelse"></div>
-</div>
-<button onclick="tren()"> Tren </button>
+  <div id ="myContHelse">
+    <div id ="myAniHelse"></div>
+  </div>
+  <button onclick="tren()"> Tren </button>
 
 <h4> Dårlige valg </h4>
-<div id ="myContValg">
-<div id ="myAniValg"></div>
-</div>
-<button onclick="sopp()"> <div id="bytt"> Spis sopp </div> </button>
+  <div id ="myContValg">
+    <div id ="myAniValg"></div>
+  </div>
+  <button onclick="sopp()"> <div id="bytt"> Spis sopp </div> </button>
 
 <script>
 var posa = 0;
@@ -59,177 +59,153 @@ var pos5 = 0;
 
 var elema = document.getElementById("myAniAlder");   
 
-  var ida = setInterval(framea, 5);
+  var ida = setInterval(framea, 10000);
   
-  function framea() {
-  
-    if (posa == 800) {
+function framea() {
+  if (posa == 800) {
       window.location.href = "dood.html";
       posa++;
-    }else if(posa==80){
+  }else if(posa==80){
       clearInterval(id3);
       setInterval(frame3, 80);
       clearInterval(id2);
       setInterval(frame2, 80);
       posa++;
-    }
-    else {
+  }
+  else {
       posa++; 
       elema.style.width = posa + 'px'; 
     return(posa);
-    } 
-  }
- 
+  } 
+}
+ //Funksjonene øker lengden på diven med forskjellige farter
 //Tørste, drikke
 
 function drikk(){
-if(pos>100){
- pos-=100;
- pos3+=30;
- }else{
- }
-}
-
-  var elem = document.getElementById("myAniVann");   
-
-  var id = setInterval(frame, 50);
-  function frame() {
-    if (pos == 800) {
-     //document.write("Du døde av tørst. ");
-    } else {
-      pos++; 
-      elem.style.width = pos + 'px'; 
-    }
-    
+  if(pos>100){
+    pos-=100;
+    pos3+=30;
+  }else{
   }
+}
+var elem = document.getElementById("myAniVann");   
+  var id = setInterval(frame, 50);
+function frame() {
+    if (pos == 800) {
+       document.write("Du døde av tørst. ");
+    } else {
+        pos++; 
+        elem.style.width = pos + 'px'; 
+    } 
+}
 
 //Sult, spise
-
-
 function spis(){
-if(pos1>100){
- pos1-=100;
- pos3+=20;
- }else{
- }
+  if(pos1>100){
+    pos1-=100;
+    pos3+=20;
+  }else{
+  }
 }
-
-
   var elem1 = document.getElementById("myAniSult");   
-
   var id1 = setInterval(frame1, 60);
-  function frame1() {
+function frame1() {
     if (pos1 == 800) {
-     //document.write("Du sultet i hjel. ");
+       document.write("Du sultet i hjel. ");
     } else {
       pos1++; 
       elem1.style.width = pos1 + 'px'; 
     }
-  }
+}
   
   //Tretthet, sove
- 
 function sov(){
-if(pos2>100){
- pos2-=100;
- }else{
- }
-}
-
-
-
-  var elem2 = document.getElementById("myAniTrett");   
-
-  var id2 = setInterval(frame2, 45);
-  function frame2() {
-    if (pos2 == 800) {
-     //document.write("Du kollapset og døde. ");
-    } else {
-      pos2++; 
-      elem2.style.width = pos2 + 'px'; 
-    }
+  if(pos2>100){
+    pos2-=100;
+  }else{
   }
-  
-  //Toalett
-  
-    
-function besook(){
-if(pos3>100){
- pos3-=100;
- }else{
- }
 }
-
-
+  var elem2 = document.getElementById("myAniTrett");   
+  var id2 = setInterval(frame2, 45);
+function frame2() {
+  if (pos2 == 800) {
+     document.write("Du kollapset og døde. ");
+  } else {
+     pos2++; 
+     elem2.style.width = pos2 + 'px'; 
+  }
+}
+  
+//Toalett   
+function besook(){
+  if(pos3>100){
+    pos3-=100;
+  }else{
+  }
+}
 
   var elem3 = document.getElementById("myAniToalett");   
-
   var id3 = setInterval(frame3, 40);
   
-  function frame3() {
-    if (pos3 == 800) {  
-     //document.write("Du er død. ");
-    } else {
+function frame3() {
+  if (pos3 == 800) {  
+     document.write("Du er død. ");
+  } else {
       pos3++; 
       elem3.style.width = pos3 + 'px'; 
-    }
   }
-  
-  //Helse
-  
-function tren(){
-if(pos4>100){
- pos4-=100;
- pos2+=40;
- }else{
- }
 }
-
+  
+//Helse
+function tren(){
+  if(pos4>100){
+    pos4-=100;
+    pos2+=40;
+  }else{
+  }
+}
   var elem4 = document.getElementById("myAniHelse");   
-
   var id4 = setInterval(frame4, 100);
-  function frame4() {
-    if (pos4 == 800) {
-     //document.write("Du er død. ");
-    } else {
+function frame4() {
+  if (pos4 == 800) {
+     document.write("Du er død. ");
+  } else {
       pos4++; 
       elem4.style.width = pos4 + 'px'; 
-    }
   }
-   function randNum(){
-    var random = Math.floor(Math.random()*28);
-    return(random);
-   }
-   var elem5 = document.getElementById("myAniValg");   
-   if(pos5>=800){
-    document.write("Dårlige valg");
-   }else{}
+}
+function randNum(){
+  var random = Math.floor(Math.random()*28);
+  return(random);
+}
+  var elem5 = document.getElementById("myAniValg");   
+if(pos5>=800){
+  document.write("Dårlige valg");
+  }else{}
    
-   var dummeValg = ["Spis sopp fra bakgården", "Start en slåsskamp", "Lyv til sjefen din", "bli med i en kult", "Spaser i mørke bakgater", "Klapp en stor rotte", "Klikk på linken i den mystiske e-posten", "stjel en bil",
+var dummeValg = ["Spis sopp fra bakgården", "Start en slåsskamp", "Lyv til sjefen din", "bli med i en kult", "Spaser i mørke bakgater", "Klapp en stor rotte", "Klikk på linken i den mystiske e-posten", "stjel en bil",
    "Bruk narkotika", "Dra på gamblingtur i Las Vegas", "Bli med hjem med den rare fyren", "Ran en bank", "Spis sand", "Ikke ta på solkrem om sommeren", 
    "Bruk rødt rundt en okse", "Stjel en sau", "Sett hjemmelaget krutt i ovnen", "Ert en full fyr", "Kast plastikk i naturen",
    "Spis plastikk", "Spis en høytaler", "Smak på fiskekroken", "Åpne potetgullposen oppned", "Kjør 1 km/t over fartsgrensen",
    "Spis hjemmelaget hockeypulver", "Lek med ild inne", "Lyv til politiet", "Se på filmer som Ailu anbefaler", ];
-   
-   function sopp(){
+//Velger en tilfeldig tekst fra arrayen hver gang knappen blir trykket, og legger en tilfeldig lengde til diven
+function sopp(){
    numSopp=randNum();
-     var x = document.getElementById("bytt");
+   var x = document.getElementById("bytt");
+   x.innerHTML = dummeValg[numSopp];
   
-    x.innerHTML = dummeValg[numSopp];
-  
-
-if(numSopp<=20 && numSopp>0){
-var soppTall = randNum()*4; 
-  pos5 += soppTall;
-  pos4 += 20;
-  elem5.style.width = pos5 + 'px'; 
-  if(pos5>=800){
-    document.write("Du gjorde for mange dårlige valg");
-   }else{}
-}else if(numSopp==0){
-document.write("Ditt valg førte til din død... ");
-}else{
-}
+   if(numSopp<=20 && numSopp>0){
+    var soppTall = randNum()*4; 
+    pos5 += soppTall;
+    pos4 += 20;
+    elem5.style.width = pos5 + 'px'; 
+      if(pos5>=800){
+        document.write("Du gjorde for mange dårlige valg");
+      }else{}
+    }else if(numSopp==0){
+      document.write("Ditt valg førte til din død... ");
+    }else{
+    }
 }
 
   
