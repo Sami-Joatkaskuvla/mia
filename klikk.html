@@ -6,13 +6,13 @@
 <link rel="stylesheet" href="klikke.css" type="text/css" media="screen">
 </head>
 <body>
-<div class="spill"> </div>
-<div class="tigging">
-<img src="tigge.jpg" alt="tiggekopp">
-<button onclick="giEn()" class="btn">Tigg penger</button> 
-</div>
-<button id="myButton" onclick="giVeldigMye()" class="btn1"><span> Klikk meg!</span> </button>
-</br>
+  <div class="spill"> </div>
+  <div class="tigging">
+    <img src="tigge.jpg" alt="tiggekopp">
+    <button onclick="giEn()" class="btn">Tigg penger</button> 
+  </div>
+  <button id="myButton" onclick="giVeldigMye()" class="btn1"><span> Klikk meg!</span> </button>
+  </br>
 <script>
 //definerer startsformuen og startskroneperklikk  
 var formue = 0;
@@ -20,26 +20,23 @@ var perKlikk = 1;
 
   //funksjon som gir penger hver gang knapp blir trykket
 function giEn(){
-
   formue+=perKlikk;
-  
   document.getElementById("myText").innerHTML = formue;
- 
 }
 
 function giVeldigMye(){
-formue+=Math.ceil(formue/2);
+  formue+=Math.ceil(formue/2);
 }
 
 function tilfBoks1(){
-var boksNr = Math.floor(Math.random()*101);
-if(boksNr == 3){ 
-  document.getElementById("myButton").style.display = "block";
-}else{
-document.getElementById("myButton").style.display = "none";
+  var boksNr = Math.floor(Math.random()*101);
+  if(boksNr == 3){ 
+    document.getElementById("myButton").style.display = "block";
+  }else{
+    document.getElementById("myButton").style.display = "none";
+  }
 }
-}
-setInterval(tilfBoks1, 1500);
+  setInterval(tilfBoks1, 1500);
 
 //definerer startsantall butikker og klikkeeffektivitet det er og startsprisen
 var antallTiggere = 0;
@@ -81,124 +78,119 @@ var sjanseVinne = 1001;
 
 <h4>Formuen din er:  <span id="myText"></span> kr</h4>
 <h4> <span id="myText1"></span></h4>
-
-</br>
+  </br>
 <h4> Vil du tjene penger uten at du selv må jobbe? Kjøp en bedrift eller ansett noen til å jobbe for deg! </h4>
 <h4> Husk å ikke kjøpe mer enn du kan. Du kan fort ende opp med en gjeld å betale. </h4>
 <table id="butikker">
-<tr>
-<th> Butikker og ansatte </th>
-<th> Antall: </th>
-<th> Pris: </th>
-<th> Klikke effektivitet </th>
-<th> Antall: </th>
-<th> Pris: </th>
-</tr>
-<tr>
-<td><button onclick="selge()" class="button"> Ansett noen til å tigge for deg  </button></td>
-<td> <h4><span id="myText3"></span></h4></td>
-<td> <h4><span id="myTexta"></span></h4></td> 
- <td><button onclick="merKlikk()" class="button"> Kjøp "10 tiggetips"  </button></td>
-<td>  <h4><span id="myTexts"></span></h4> </td>
-<td>  <h4><span id="myTextb"></span></h4> </td>
-</tr>
-<tr>
-<td><button onclick="selge1()" class="button"> Ansett noen til å selge småting du har  </button></td>
-<td> <h4><span id="myText4"></span></h4></td>
-<td> <h4><span id="myTexta1"></span></h4> </td>
-<td> <button onclick="merKlikk1()" class="button"> Kjøp en finere kopp  </button> </td>
-<td>  <h4><span id="myTexts1"></span></h4> </td>
-<td>  <h4><span id="myTextb1"></span></h4> </td>
-</tr>
-<tr>
-<td><button onclick="selge2()" class="button"> Ansett noen til å samle småting som kan selges </button></td>
-<td> <h4><span id="myText5"></span></h4> </td> 
-<td> <h4><span id="myTexta2"></span></h4>  </td>
-<td> <button onclick="merKlikk2()" class="button"> Få tiggeopplæring </button> </td> 
-<td>  <h4><span id="myTexts2"></span></h4> </td>
-<td>  <h4><span id="myTextb2"></span></h4> </td>
- </tr>
-<tr>
-<td><button onclick="selge3()" class="button"> Kjøp en pølsebod </button></td>
-<td> <h4><span id="myText6"></span></h4> </td>
-<td> <h4><span id="myTexta3"></span></h4>  </td>
-<td> <button onclick="merKlikk3()" class="button"> Få tips hvor de rikeste strøkene er</button>  </td>
-<td>  <h4><span id="myTexts3"></span></h4> </td>
-<td>  <h4><span id="myTextb3"></span></h4> </td></br></br>
-</tr>
-<tr>
-<td> <button onclick="selge4()" class="button"> Kjøp en kiosk </button> </td>
-<td> <h4><span id="myText7"></span></h4> </td>
-<td> <h4><span id="myTexta4"></span></h4> </td>
-<td> <button onclick="merKlikk4()" class="button"> Skuespilltrening </button></td>
-<td> <h4><span id="myTexts4"></span></h4> </td>
-<td> <h4><span id="myTextb4"></span></h4> </td>
-</tr>
-<tr>
-<td> <button onclick="selge5()" class="button"> Kjøp en liten matvarebutikk </button>  </td>
-<td> <h4><span id="myText8"></span></h4> </td>
-<td> <h4><span id="myTexta5"></span></h4> </td>
-<td> <button onclick="merKlikk5()" class="button"> Lag en falsk gofundme </button> </td>
-<td> <h4><span id="myTexts5"></span></h4>  </td>
-<td> <h4><span id="myTextb5"></span></h4>  </td>
-</tr>
-<tr>
-<td> <button onclick="selge6()" class="button"> Kjøp en klesbutikk </button>  </td>
-<td> <h4><span id="myText9"></span></h4> </td>
-<td> <h4><span id="myTexta6"></span></h4> </td>
-<td> <button onclick="merKlikk6()" class="button"> Ansett masse tiggere i flere byer </button> </td>
-<td> <h4><span id="myTexts6"></span></h4>  </td>
-<td> <h4><span id="myTextb6"></span></h4>  </td>
-</tr>
+  <tr>
+    <th> Butikker og ansatte </th>
+    <th> Antall: </th>
+    <th> Pris: </th>
+    <th> Klikke effektivitet </th>
+    <th> Antall: </th>
+    <th> Pris: </th>
+  </tr>
+  <tr>
+    <td><button onclick="selge()" class="button"> Ansett noen til å tigge for deg  </button></td>
+    <td> <h4><span id="myText3"></span></h4></td>
+    <td> <h4><span id="myTexta"></span></h4></td> 
+    <td><button onclick="merKlikk()" class="button"> Kjøp "10 tiggetips"  </button></td>
+    <td>  <h4><span id="myTexts"></span></h4> </td>
+    <td>  <h4><span id="myTextb"></span></h4> </td>
+  </tr>
+  <tr>
+    <td><button onclick="selge1()" class="button"> Ansett noen til å selge småting du har  </button></td>
+    <td> <h4><span id="myText4"></span></h4></td>
+    <td> <h4><span id="myTexta1"></span></h4> </td>
+    <td> <button onclick="merKlikk1()" class="button"> Kjøp en finere kopp  </button> </td>
+    <td>  <h4><span id="myTexts1"></span></h4> </td>
+    <td>  <h4><span id="myTextb1"></span></h4> </td>
+  </tr>
+  <tr>
+    <td><button onclick="selge2()" class="button"> Ansett noen til å samle småting som kan selges </button></td>
+    <td> <h4><span id="myText5"></span></h4> </td> 
+    <td> <h4><span id="myTexta2"></span></h4>  </td>
+    <td> <button onclick="merKlikk2()" class="button"> Få tiggeopplæring </button> </td> 
+    <td>  <h4><span id="myTexts2"></span></h4> </td>
+    <td>  <h4><span id="myTextb2"></span></h4> </td>
+  </tr>
+  <tr>
+    <td><button onclick="selge3()" class="button"> Kjøp en pølsebod </button></td>
+    <td> <h4><span id="myText6"></span></h4> </td>
+    <td> <h4><span id="myTexta3"></span></h4>  </td>
+    <td> <button onclick="merKlikk3()" class="button"> Få tips hvor de rikeste strøkene er</button>  </td>
+    <td>  <h4><span id="myTexts3"></span></h4> </td>
+    <td>  <h4><span id="myTextb3"></span></h4> </td></br></br>
+  </tr>
+  <tr>
+    <td> <button onclick="selge4()" class="button"> Kjøp en kiosk </button> </td>
+    <td> <h4><span id="myText7"></span></h4> </td>
+    <td> <h4><span id="myTexta4"></span></h4> </td>
+    <td> <button onclick="merKlikk4()" class="button"> Skuespilltrening </button></td>
+    <td> <h4><span id="myTexts4"></span></h4> </td>
+    <td> <h4><span id="myTextb4"></span></h4> </td>
+  </tr>
+  <tr>
+    <td> <button onclick="selge5()" class="button"> Kjøp en liten matvarebutikk </button>  </td>
+    <td> <h4><span id="myText8"></span></h4> </td>
+    <td> <h4><span id="myTexta5"></span></h4> </td>
+    <td> <button onclick="merKlikk5()" class="button"> Lag en falsk gofundme </button> </td>
+    <td> <h4><span id="myTexts5"></span></h4>  </td>
+    <td> <h4><span id="myTextb5"></span></h4>  </td>
+  </tr>
+  <tr>
+    <td> <button onclick="selge6()" class="button"> Kjøp en klesbutikk </button>  </td>
+    <td> <h4><span id="myText9"></span></h4> </td>
+    <td> <h4><span id="myTexta6"></span></h4> </td>
+    <td> <button onclick="merKlikk6()" class="button"> Ansett masse tiggere i flere byer </button> </td>
+    <td> <h4><span id="myTexts6"></span></h4>  </td>
+    <td> <h4><span id="myTextb6"></span></h4>  </td>
+  </tr>
 </table>
-<h4> Lottomillionærer er ikke som andre millionærer! </h4> 
-<h4> Her kan du prøve lykken din med tipping. Du får 100 ganger det du tippet hvis du vinner! </h4>
-<div class="lottoknapp">
-<button onclick="tippe()" class="buttons"> Lotto </button>
-</div>
-<div class="bestikkelse">
+  <h4> Lottomillionærer er ikke som andre millionærer! </h4> 
+  <h4> Her kan du prøve lykken din med tipping. Du får 100 ganger det du tippet hvis du vinner! </h4>
+  <div class="lottoknapp">
+    <button onclick="tippe()" class="buttons"> Lotto </button>
+  </div>
+
 <table>
-<tr>
-<th> </th>
-<th> Vinnersjanse </th>
-<th>    <h4>   </h4>    </th>
-<th> Pris: </th>
-</tr>
-<tr>
-<td><button onclick="bestikke()" class="button"> Bestikk lottosjefen </button> </td>
-<td> <h4><span id="myTextbe"></span></h4> </td>
-<td> <h4>   %   </h4> </td>
-<td> <h4><span id="myTextbe1"></span></h4> </td>
-</tr>
+  <tr>
+    <th> </th>
+    <th> Vinnersjanse </th>
+    <th> Pris: </th>
+  </tr>
+  <tr>
+    <td><button onclick="bestikke()" class="button"> Bestikk lottosjefen </button> </td>
+    <td> <h4><span id="myTextbe"></span></h4> </td>
+    <td> <h4><span id="myTextbe1"></span></h4> </td>
+  </tr>
 </table>
-<h2> Gambling </h2>
-<h3> Stein saks papir </h3>
-<h4> Å spille koster 500 kr og premien er 1000 kr. Du taper hvis det blir likt </h4>
-<button id="stein"> Stein </button>
-<button id="saks"> Saks </button>
-<button id="papir"> Papir </button>
-<p id="demo"></p>
-<h3> Husk fargene! </h3>
-<h4> Du må huske fargene som blir vist, og deretter gjenta fargene. </h4>
-<button id="startFarger"> Spill "Husk fargene!" </button>
-<p id="demo1"></p>
-<button id="#190cff"> Blå </button>
-<button id="#ff1119"> Rød </button>
-<button id="#39ff11"> Grønn </button>
-<button id="#fff707"> Gul </button>
-</br>
-<button id="sammenlign"> Send inn </button>
-</br>
-<p id="demo2"></p>
+  <h2> Gambling </h2>
+  <h3> Stein saks papir </h3>
+  <h4> Å spille koster 500 kr og premien er 1000 kr. Du taper hvis det blir likt </h4>
+  <button id="stein"> Stein </button>
+  <button id="saks"> Saks </button>
+  <button id="papir"> Papir </button>
+  <p id="demo"></p>
+  <h3> Husk fargene! </h3>
+  <h4> Du må huske fargene som blir vist, og deretter gjenta fargene. </h4>
+  <button id="startFarger"> Spill "Husk fargene!" </button>
+  <p id="demo1"></p>
+  <button id="#190cff"> Blå </button>
+  <button id="#ff1119"> Rød </button>
+  <button id="#39ff11"> Grønn </button>
+  <button id="#fff707"> Gul </button>
+    </br>
+  <button id="sammenlign"> Send inn </button>
+    </br>
+  <p id="demo2"></p>
+  
 <canvas id="myCanvas" width="200" height="100" style="border:5px">
-
-
-</div>
-<button id="MyButton1" onclick="window.location.href = 'nyttliv.html';" class="nyttliv">Start et nytt liv</button> 
+  <button id="MyButton1" onclick="window.location.href = 'nyttliv.html';" class="nyttliv">Start et nytt liv</button> 
+  
 <script>
- 
-//funkjsoner som gir større formue, brukes i setinterval senere
 
+//funkjsoner som gir større formue, brukes i setinterval senere
 function giMer(){
   formue+=1;
 }
@@ -228,12 +220,10 @@ function selge(){
   setInterval(giMer, 1000);
   antallTiggere +=1;
 
- formue-=pris;
- pris = (Math.round(100*(Math.pow(1.15, antallTiggere))));
- document.getElementById("myText3").innerHTML = antallTiggere; 
- document.getElementById("myTexta").innerHTML = pris;
-
-
+  formue-=pris;
+  pris = (Math.round(100*(Math.pow(1.15, antallTiggere))));
+    document.getElementById("myText3").innerHTML = antallTiggere; 
+    document.getElementById("myTexta").innerHTML = pris;
 }
 function selge1(){
   setInterval(giMer1, 1000);
@@ -241,19 +231,17 @@ function selge1(){
   
   formue-=pris1;
   pris1 = (Math.round(400*Math.pow(1.15, antallSelgere)));
-  
-  document.getElementById("myText4").innerHTML = antallSelgere; 
- document.getElementById("myTexta1").innerHTML = pris1;
+    document.getElementById("myText4").innerHTML = antallSelgere; 
+    document.getElementById("myTexta1").innerHTML = pris1;
 }
 function selge2(){
   setInterval(giMer2, 1000);
- antallSamlere+=1;
+  antallSamlere+=1;
   formue-=pris2;
   pris2 = (Math.round(600*Math.pow(1.15, antallSamlere)));
   
-  document.getElementById("myText5").innerHTML = antallSamlere; 
-  document.getElementById("myTexta2").innerHTML = pris2;
-  
+    document.getElementById("myText5").innerHTML = antallSamlere; 
+    document.getElementById("myTexta2").innerHTML = pris2;
 }
 function selge3(){
   setInterval(giMer3, 1000);
@@ -261,32 +249,32 @@ function selge3(){
   formue-=pris3;
   pris3 = (Math.round(1200*Math.pow(1.15, antallPoolse)));
   
-  document.getElementById("myText6").innerHTML = antallPoolse; 
-  document.getElementById("myTexta3").innerHTML = pris3;
+    document.getElementById("myText6").innerHTML = antallPoolse; 
+    document.getElementById("myTexta3").innerHTML = pris3;
 }
 function selge4(){
   setInterval(giMer4, 1000);
   antallKiosk+=1;
   formue-=pris4;
   pris4 = (Math.round(10000*Math.pow(1.15, antallKiosk)));
-  document.getElementById("myText7").innerHTML = antallKiosk;
-   document.getElementById("myTexta4").innerHTML = pris4;
+    document.getElementById("myText7").innerHTML = antallKiosk;
+    document.getElementById("myTexta4").innerHTML = pris4;
 }
 function selge5(){
   setInterval(giMer5(),1000);
   antallMatbutikk+=1;
   formue-=pris5;
   pris5 = (Math.round(200000*Math.pow(1.15, antallMatbutikk)));
-  document.getElementById("myText8").innerHTML = antallMatbutikk;
-  document.getElementById("myTexta5").innerHTML = pris5;
+    document.getElementById("myText8").innerHTML = antallMatbutikk;
+    document.getElementById("myTexta5").innerHTML = pris5;
 }
 function selge6(){
   setInterval(giMer6(), 1000);
   antallKlesbutikk+=1;
   formue-=pris6;
   pris6 = (Math.round(1100000*Math.pow(1.15, antallKlesbutikk)));
-  document.getElementById("myText9").innerHTML = antallKlesbutikk;
-  document.getElementById("myTexta6").innerHTML = pris6;
+    document.getElementById("myText9").innerHTML = antallKlesbutikk;
+    document.getElementById("myTexta6").innerHTML = pris6;
 }
 /*
 Funksjoner som blir aktivert når knapper trykkes som øker antall peger per klikk, trekker fra prisen fra formuen, gir ny pris,
@@ -297,129 +285,120 @@ function merKlikk(){
   antallTips+=1;
   formue-= prisKlikk;
   prisKlikk = (Math.round(300*Math.pow(1.15, antallTips)));
-  document.getElementById("myTexts").innerHTML = antallTips; 
-  document.getElementById("myTextb").innerHTML = prisKlikk;
+    document.getElementById("myTexts").innerHTML = antallTips; 
+    document.getElementById("myTextb").innerHTML = prisKlikk;
 }
-  function merKlikk1(){
-    perKlikk+=2;
-    antallKopper+=1;
-    formue-= prisKlikk1;
-    prisKlikk1 = (Math.round(500*Math.pow(1.15, antallKopper)));
-   document.getElementById("myTexts1").innerHTML = antallKopper;
-   document.getElementById("myTextb1").innerHTML = prisKlikk1; 
-  }
-  function merKlikk2(){
-    perKlikk+=3;
-    antallOpplaering+=1;
-    formue-= prisKlikk2;
-    prisKlikk2 = (Math.round(1000*Math.pow(1.15, antallOpplaering)));
+function merKlikk1(){
+  perKlikk+=2;
+  antallKopper+=1;
+  formue-= prisKlikk1;
+  prisKlikk1 = (Math.round(500*Math.pow(1.15, antallKopper)));
+    document.getElementById("myTexts1").innerHTML = antallKopper;
+    document.getElementById("myTextb1").innerHTML = prisKlikk1; 
+}
+function merKlikk2(){
+  perKlikk+=3;
+  antallOpplaering+=1;
+  formue-= prisKlikk2;
+  prisKlikk2 = (Math.round(1000*Math.pow(1.15, antallOpplaering)));
     document.getElementById("myTexts2").innerHTML = antallOpplaering; 
     document.getElementById("myTextb2").innerHTML = prisKlikk2;
-  }
-  function merKlikk3(){
-    perKlikk+=5;
-    antallStrook+=1;
-    formue-=prisKlikk3;
-    prisKlikk3 = (Math.round(1500*Math.pow(1.15, antallStrook)));
+}
+function merKlikk3(){
+  perKlikk+=5;
+  antallStrook+=1;
+  formue-=prisKlikk3;
+  prisKlikk3 = (Math.round(1500*Math.pow(1.15, antallStrook)));
     document.getElementById("myTexts3").innerHTML = antallStrook; 
     document.getElementById("myTextb3").innerHTML = prisKlikk3;
-  }
-  function merKlikk4(){
-    perKlikk+=8;
-    antallSkuespill+=1;
-    formue-=prisKlikk4;
-    prisKlikk4 = (Math.round(7500*Math.pow(1.15, antallSkuespill)));
+}
+function merKlikk4(){
+  perKlikk+=8;
+  antallSkuespill+=1;
+  formue-=prisKlikk4;
+  prisKlikk4 = (Math.round(7500*Math.pow(1.15, antallSkuespill)));
     document.getElementById("myTexts4").innerHTML = antallSkuespill;
-     document.getElementById("myTextb4").innerHTML = prisKlikk4;
-  }
-  function merKlikk5(){
-    perKlikk+=12;
-    antallGofundme+=1;
-    formue-=prisKlikk5;
-    prisKlikk5 = (Math.round(100000*Math.pow(1.15, antallGofundme)));
+    document.getElementById("myTextb4").innerHTML = prisKlikk4;
+}
+function merKlikk5(){
+  perKlikk+=12;
+  antallGofundme+=1;
+  formue-=prisKlikk5;
+  prisKlikk5 = (Math.round(100000*Math.pow(1.15, antallGofundme)));
     document.getElementById("myTexts5").innerHTML = antallGofundme;
     document.getElementById("myTextb5").innerHTML = prisKlikk5;
-  }
-  function merKlikk6(){
-    perKlikk+=20;
-    antallMasseTiggere+=1;
-    formue-=prisKlikk6;
-    prisKlikk6 = (Math.round(750000*Math.pow(1.15, antallMasseTiggere)));
+}
+function merKlikk6(){
+  perKlikk+=20;
+  antallMasseTiggere+=1;
+  formue-=prisKlikk6;
+  prisKlikk6 = (Math.round(750000*Math.pow(1.15, antallMasseTiggere)));
     document.getElementById("myTexts6").innerHTML = antallMasseTiggere;
     document.getElementById("myTextb6").innerHTML = prisKlikk6;
-  }
-  //Lotto knapp funksjon
-  
-  function tippe(){
+}
+
+  //Lotto knapp funksjon  
+function tippe(){
     var tippeTall = prompt("Hvor mye vil du tippe?");
     var tippeTall1 = parseInt(tippeTall);
     
-   while (Number.isInteger(tippeTall1) == false || tippeTall1<0) {
-    
-    tippeTall = prompt("Hvor mye vil du tippe?");
-    tippeTall1 = parseInt(tippeTall);
+    while (Number.isInteger(tippeTall1) == false || tippeTall1<0) {
+      tippeTall = prompt("Hvor mye vil du tippe?");
+      tippeTall1 = parseInt(tippeTall);
     }
   
     formue-=tippeTall1; 
     var randNum = Math.floor(Math.random()*sjanseVinne);
+    console.log(sjanseVinne);
     if (randNum == 1){
       formue+=100*tippeTall1;
     } 
-    
-  }
-  function bestikke(){
+}
+function bestikke(){
     formue -= bestikkePris;
     bestikkePris = (Math.round(10000*Math.pow(1.5, 1001-sjanseVinne)));
-    sjanseVinne -= 10;
-    
-    document.getElementById("myTextbe1").innerHTML = bestikkePris; 
-    document.getElementById("myTextbe").innerHTML = 100/(sjanseVinne-10); 
-  }
+    sjanseVinne -= 5;
+      document.getElementById("myTextbe1").innerHTML = bestikkePris; 
+      document.getElementById("myTextbe").innerHTML = "1/" + sjanseVinne; 
+}
   
-  //Stein saks papir
-  function svarSteinSP(tallSSP){
-  
+//Stein saks papir
+function svarSteinSP(tallSSP){
   var tilfeldigTall = Math.floor(Math.random() * 3) + 1;
   return tilfeldigTall;
-  
-  }
+}
+
   // 1 er stein, 2 er saks, 3 er papir
-  function funkStein(){
-    console.log("stein");
+function funkStein(){
     formue-=500;
     steinTall = 1;
     maskinTall = svarSteinSP();
-    console.log(maskinTall);
     if (steinTall == maskinTall){
       document.getElementById("demo").innerHTML = "Den andre valgte stein. Det ble likt.";
     } else if (maskinTall == 2){
-    formue+=1000;
-    document.getElementById("demo").innerHTML = "Den andre valgte saks. Du vant.";
+      formue+=1000;
+      document.getElementById("demo").innerHTML = "Den andre valgte saks. Du vant.";
     } else if (maskinTall == 3){
       document.getElementById("demo").innerHTML = "Den andre valgte papir. Du tapte.";
     }
-  }
-  function funkSaks(){
-    console.log("saks");
+}
+function funkSaks(){
     formue-=500;
     saksTall = 2;
     maskinTall = svarSteinSP();
-    console.log(maskinTall);
     if (saksTall == maskinTall){
       document.getElementById("demo").innerHTML = "Den andre valgte saks. Det ble likt.";
     } else if (maskinTall == 1){
       document.getElementById("demo").innerHTML = "Den andre valgte stein. Du tapte.";
     } else if (maskinTall == 3){
-    formue+= 1000;
+      formue+= 1000;
       document.getElementById("demo").innerHTML = "Den andre valgte papir. Du vant.";
     }
-  }
-  function funkPapir(){
-    console.log("papir");
+}
+function funkPapir(){
     formue-=500;
     papirTall = 3;
     maskinTall = svarSteinSP();
-    console.log(maskinTall);
     if (papirTall == maskinTall){
       document.getElementById("demo").innerHTML = "Den andre valgte papir. Det ble likt.";
     } else if (maskinTall == 1){
@@ -428,30 +407,30 @@ function merKlikk(){
     } else if (maskinTall == 2){
       document.getElementById("demo").innerHTML = "Den andre valgte saks. Du tapte.";
     }
-  }
+}
   
   document.getElementById("stein").addEventListener("click", funkStein);
   document.getElementById("saks").addEventListener("click", funkSaks);
   document.getElementById("papir").addEventListener("click", funkPapir);
   
-  /*Husk fargene!
-  1=blå 2=rød 3=grønn 4=gul
-  */
+/*Husk fargene!
+1=blå 2=rød 3=grønn 4=gul
+*/
   
   var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+  var ctx = c.getContext("2d");
 
- var fargeArray = [];
+  var fargeArray = [];
  
-  function randFarger(randFarge){
+ function randFarger(randFarge){
     var tilfeldigFargeNr = Math.floor(Math.random() * 4) + 1 ;
     return tilfeldigFargeNr;
-  }
+ }
   
-  function lagArray(){
+ function lagArray(){
     while (fargeArray.length<10){
-    tilfFarge = randFarger();
-    var leggTil;
+      tilfFarge = randFarger();
+      var leggTil;
     if(tilfFarge==1){
       leggTil = "#190cff";
     }else if(tilfFarge==2){
@@ -462,71 +441,68 @@ var ctx = c.getContext("2d");
       leggTil = "#fff707";
     }
       fargeArray.push(leggTil);
-      
     }
-    console.log(fargeArray);
     return fargeArray;
-   }
+ }
     
-  function funkFarger(){
+function funkFarger(){
   fargeArray.length=0;
   u=0;
   formue-=1;
   fargerArray = lagArray();
- 
     var myArr1 = setInterval(funkArray1, 1000);
     var myArr2 = setInterval(funkArray2, 1100);
  var u=0;
- function funkArray1(){
- fargerArray = lagArray();
-  console.log(fargerArray[u]);
-   ctx.fillStyle = fargerArray[u];
-  ctx.fillRect(20, 20, 150, 100); 
-  u++;
-  if(u>9){
-    clearInterval(myArr1);
-  }
- }
-var n=0;
- function funkArray2(){
+  function funkArray1(){
+    fargerArray = lagArray();
+    console.log(fargerArray[u]);
+    ctx.fillStyle = fargerArray[u];
+    ctx.fillRect(20, 20, 150, 100); 
+    u++;
+    if(u>9){
+      clearInterval(myArr1);
+    }
+}
+  var n=0;
+function funkArray2(){
   ctx.fillStyle = "#000000";
   ctx.fillRect(20, 20, 150, 100); 
   n++;
   if(n>10){
     clearInterval(myArr2);
   }
- }
-      }
+}
+}
       var valgArray = [];
-      function tilBlaa(){
+function tilBlaa(){
         valgArray.push("#190cff");
         console.log(valgArray);
-      }
-      function tilRoed(){
+}
+function tilRoed(){
         valgArray.push("#ff1119");
         console.log(valgArray);
-      }
-      function tilGroen(){
+}
+function tilGroen(){
         valgArray.push("#39ff11");
         console.log(valgArray);
-      }
-      function tilGul(){
+}
+function tilGul(){
         valgArray.push("#fff707");
         console.log(valgArray);
-      }
-      function arraySammenlign(){
+}
+function arraySammenlign(){
         fargerArray = lagArray();
         
         if(JSON.stringify(fargerArray)===JSON.stringify(valgArray)){
           formue+=10000;
           document.getElementById("demo2").innerHTML = "Riktig!";
         } else{
-        document.getElementById("demo2").innerHTML = "Feil";
+          document.getElementById("demo2").innerHTML = "Feil";
         }
         fargeArray.length=0;
         valgArray.length=0;
         
-      }
+}
   document.getElementById("startFarger").addEventListener("click", funkFarger);
   document.getElementById("#190cff").addEventListener("click", tilBlaa);
   document.getElementById("#ff1119").addEventListener("click", tilRoed);
@@ -534,105 +510,102 @@ var n=0;
   document.getElementById("#fff707").addEventListener("click", tilGul);
   document.getElementById("sammenlign").addEventListener("click", arraySammenlign);
   
-  //Funksjoner som oppdaterer prisene og antallene og formuen 
-  
+  //Funksjoner som oppdaterer prisene og antallene og formuen   
 function oppdater(){
  document.getElementById("myText").innerHTML = formue; 
   if(formue<0){
     document.write("Du er i gjeld! Alle tingene dine blir solgt for å betale regninger.");
     }
     if(formue>30 && formue<50){
-
-document.getElementById("myText1").innerHTML = "Lommene dine føles ikke så tomme lenger!";
+      document.getElementById("myText1").innerHTML = "Lommene dine føles ikke så tomme lenger!";
+    } 
+    if(formue>100 && formue<150){
+      document.getElementById("myText1").innerHTML = "Det finnes penger laget av papir??!";
+    }
+    if(formue>200 && formue<300){
+      document.getElementById("myText1").innerHTML = "Kanskje du endelig kan få deg et måltid.";
+    }
+    if(formue>500 && formue<1000){
+      document.getElementById("myText1").innerHTML = "Lommene begynte å få dårlig plass.";
+    }
+    if (formue>1001 && formue<2000){
+      document.getElementById("myText1").innerHTML = "Kanskje det er på tide å skaffe en lommebok.";
+    }
+    if (formue>2001 && formue<10000){
+      document.getElementById("myText1").innerHTML = "Nå trenger du ikke å dumpsterdive lenger.";
+    }
+    if(formue>10001 && formue<50000){
+      document.getElementById("myText1").innerHTML = "På tide å skaffe deg en bankkonto.";
+    }
+    if(formue>50001 && formue<200001){
+      document.getElementById("myText1").innerHTML = "Du kan flytte til et tørt sted.";
+    }
 }
-  if(formue>100 && formue<150){
-  document.getElementById("myText1").innerHTML = "Det finnes penger laget av papir??!";
-}
-  if(formue>200 && formue<300){
-    document.getElementById("myText1").innerHTML = "Kanskje du endelig kan få deg et måltid.";
-  }
-  if(formue>500 && formue<1000){
-    document.getElementById("myText1").innerHTML = "Lommene begynte å få dårlig plass.";
-  }
-  if (formue>1001 && formue<2000){
-    document.getElementById("myText1").innerHTML = "Kanskje det er på tide å skaffe en lommebok.";
-  }
-  if (formue>2001 && formue<10000){
-    document.getElementById("myText1").innerHTML = "Nå trenger du ikke å dumpsterdive lenger.";
-  }
-  if(formue>10001 && formue<50000){
-    document.getElementById("myText1").innerHTML = "På tide å skaffe deg en bankkonto.";
-  }
-  if(formue>50001 && formue<200001){
-    document.getElementById("myText1").innerHTML = "Du kan flytte til et tørt sted.";
-  }
-}
-setInterval(oppdater, 50);
+  setInterval(oppdater, 50);
 function oppdater1(){
   document.getElementById("myText3").innerHTML = antallTiggere; 
   document.getElementById("myTexts").innerHTML = antallTips; 
   document.getElementById("myTexta").innerHTML = pris;
   document.getElementById("myTextb").innerHTML = prisKlikk;
 }
-setInterval(oppdater1, 500);
+  setInterval(oppdater1, 500);
 function oppdater2(){
   document.getElementById("myText4").innerHTML = antallSelgere;
   document.getElementById("myTexts1").innerHTML = antallKopper; 
   document.getElementById("myTexta1").innerHTML = pris1;
   document.getElementById("myTextb1").innerHTML = prisKlikk1;
 }
-setInterval(oppdater2, 500);
+  setInterval(oppdater2, 500);
 function oppdater3(){
   document.getElementById("myText5").innerHTML = antallSamlere;
   document.getElementById("myTexts2").innerHTML = antallOpplaering; 
   document.getElementById("myTexta2").innerHTML = pris2;
   document.getElementById("myTextb2").innerHTML = prisKlikk2;
 }
-setInterval(oppdater3, 500);
+  setInterval(oppdater3, 500);
 function oppdater4(){
   document.getElementById("myText6").innerHTML = antallPoolse; 
   document.getElementById("myTexts3").innerHTML = antallStrook;
   document.getElementById("myTexta3").innerHTML = pris3;
   document.getElementById("myTextb3").innerHTML = prisKlikk3;
 }
-setInterval(oppdater4, 500);
+  setInterval(oppdater4, 500);
 function oppdater5(){
   document.getElementById("myText7").innerHTML = antallKiosk; 
   document.getElementById("myTexts4").innerHTML = antallSkuespill;
   document.getElementById("myTexta4").innerHTML = pris4;
   document.getElementById("myTextb4").innerHTML = prisKlikk4;
 }
-setInterval(oppdater5, 500);
+  setInterval(oppdater5, 500);
 function oppdater6(){
   document.getElementById("myText8").innerHTML = antallMatbutikk; 
   document.getElementById("myTexts5").innerHTML = antallGofundme;
   document.getElementById("myTexta5").innerHTML = pris5;
   document.getElementById("myTextb5").innerHTML = prisKlikk5;
 }
-setInterval(oppdater6, 500);
+  setInterval(oppdater6, 500);
 function oppdater7(){
   document.getElementById("myText9").innerHTML = antallKlesbutikk; 
   document.getElementById("myTexts6").innerHTML = antallMasseTiggere;
   document.getElementById("myTexta6").innerHTML = pris6;
   document.getElementById("myTextb6").innerHTML = prisKlikk6;
 }
-setInterval(oppdater7, 500);
+  setInterval(oppdater7, 500);
 function oppdater8(){
   document.getElementById("myTextbe1").innerHTML = bestikkePris; 
-    document.getElementById("myTextbe").innerHTML = 100/(sjanseVinne-1).toFixed(2); 
+  document.getElementById("myTextbe").innerHTML = "1/"+sjanseVinne; 
 }
-
-setInterval(oppdater8, 500);
+  setInterval(oppdater8, 500);
 
 function visKnapp(){
-  
-if(formue>2000000){ 
-  document.getElementById("MyButton1").style.display = "block";
-}else{
-document.getElementById("MyButton1").style.display = "none";
+  if(formue>2000000){ 
+    document.getElementById("MyButton1").style.display = "block";
+  }else{
+    document.getElementById("MyButton1").style.display = "none";
+  } 
 }
-}
-setInterval(visKnapp, 500);
+  setInterval(visKnapp, 500);
+
 </script>
 
 </body>

@@ -7,41 +7,47 @@
     <link rel="stylesheet" href="klikke4.css" type="text/css" media="screen">
     <script type="text/javascript" src="include.js"></script>
   </head>
-  <body>
-  <div class="dropdown">
+<body>
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Meny</button>
   <div id="myDropdown" class="dropdown-content">
-   <a href="fortsettelse.html">Fortsettelse</a>
+    <a href="fortsettelse.html">Fortsettelse</a>
     <a href="mysterie.html">Mysterie</a>
-  <a href="hvilken.html"> Hvilken? </a>
-  <a href="oppskrift.html"> Oppskrift </a>
+    <a href="hvilken.html"> Hvilken? </a>
+    <a href="oppskrift.html"> Oppskrift </a>
   </div>
 </div>
-<div id="skjultDiv"> Lag småkakene</div>
+<div id="skjultDiv"> 7 ord</div>
   <h2> Småkaker </h2>
   <p> Nok til 23 småkaker. </p>
-  <p> 500 g smør   </p>
-  <p> 200 g sukker  </p>
-  <p> Bland sammen med miksmaster. </p>
-  <p> 6 egg </p>
-  <p> Tilsett en om gangen. </p>
-  <p> 100 g speltmel </p>
-  <p> 2 ss natron </p>
-  <p> Brett inn.  </p>
-  <p> 3 dl sukker </p>
-  <p> Ha sukkeret på deigen før de stekes </p>
-  <p> Stek i 130 grader i 14 minutter. </p>
+  <p>  </p>
+  <p> 3 egg   </p>
+  <p> 8 ss palmesukker  </p>
+  <p> Bland sammen med <span class="roodBokstav">m</span>iksmaster til eggedosis. </p>
+  <p> 6 dl rugmel </p>
+  <p> 4 ss olje </p>
+  <p> 10 <span class="rosaBokstav">t</span>s cola </p>
+  <p> Bland sammen med eggedosisen.  </p>
+  <p> 2 ts allehånde </p>
+  <p> 7 dråper orkideessens </p>
+  <p> 9 knuste isbiter </p>
+  <p> 5 tårer </p>
+  <p> Bland forsikti<span class="lillaBokstav">g</span> inn. </p>
+  <p> Lag små kuler på et bakebrett.  </p>
+  <p> Stek i 13 minutter i 205 grader. </p>
+  <p> Avkjøl i en halvtime og dekorer med en lotusblomst. </p>
 <button onclick="oppTrykk()" class="oppBtn"> Småkaker </button>
-  <script>
+  
+<script>
   var trykk = 0;
   var x = document.getElementById("skjultDiv");
   x.style.display = "none";
+  //Viser tekst når knappen blir trykket et visst antall ganger 
   function oppTrykk(){
     trykk += 1;
     console.log(trykk);
     if(trykk == 23){
-       x.style.display = "block";
-       
+       x.style.display = "block"; 
     }
   }
   </script>
