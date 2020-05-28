@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="klikke4.css" type="text/css" media="screen">
     <script type="text/javascript" src="include.js"></script>
   </head>
-  <body>
-  <div class="dropdown">
+  <body id="restenbody">
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Meny</button>
   <div id="myDropdown" class="dropdown-content">
-   <a href="fortsettelse.html">Fortsettelse</a>
+    <a href="fortsettelse.html">Fortsettelse</a>
     <a href="mysterie.html">Mysterie</a>
-  
+    <a href="hvilken.html"> Hvilken? </a>
+    <a href="oppskrift.html"> Oppskrift </a>
   </div>
 </div>
 
-
-<h3> Du er død... </h3><div id="hund"> </div>
-
-
+  <h3> Du er død... </h3><div id="hund"> </div>
   <h3> Du sitter fast mellom det gode og det onde stedet </h3>
-  <h3> For å komme til det gode stedet må du løse mysteriumet </h3>
-  <p id="demo"></p>
+  <h3> For å komme til det gode st<span class="groenBokstav">e</span>det må du løse mysteriumet og finne kodeordet</h3>
+  <h3> Kodeordet finner du ved å samle de riktige ordene og gjøre dem til ett </h3>
+  <button onclick="kodeord()"> Kodeord </button>
+  <p class="demo" id="demo"></p>
   <canvas id="can" onmousemove="det()"> </canvas>
   <div id="hund4"> </div>
   <div id="hund1"> </div>
@@ -31,82 +31,82 @@
   <div id="hund3"> </div>
   <div id="hund5"> </div>
   <div id="hund6"> </div>
-  <script>
   
-  function det(){
+<script>
+//viser tekster når musepekeren er på spesifikke steder på canvaset
+function det(){
   var canvas = document.querySelector("#can");
   var ctx = canvas.getContext("2d");
   var x = event.clientX;
   var y = event.clientY;
  
-  if(x<157 && x>152){
+  if(x<157 && x>150){
     document.getElementById("demo").innerHTML = "Radiesthesia";
   }else{
-  document.getElementById("demo").innerHTML = "Irsk terrier";
+    document.getElementById("demo").innerHTML = "Irsk terrier";
   }
-  }
-  
-  function randTall(){
-    var random = Math.floor(Math.random()*10);
-    return random;
-  }
-  function randTekst(){
-    randNr=randTall();
-    if(randNr==5){
+ }
+//Funkjsonene viser tekster på tilfeldige tidspunkt
+function randTall(){
+  var random = Math.floor(Math.random()*10);
+  return random;
+}
+function randTekst(){
+  randNr=randTall();
+  if(randNr==5){
     document.getElementById("hund").innerHTML = "Golden retriever";
-    }else{
+  }else{
     document.getElementById("hund").innerHTML = "";
-    }
   }
-  function randTekst1(){
-    randNr = randTall();
-    if(randNr==8){
+}
+function randTekst1(){
+  randNr = randTall();
+  if(randNr==8){
       document.getElementById("hund1").innerHTML = "Beagle";
-    }else{
-    document.getElementById("hund1").innerHTML = "";
-    }
+  }else{
+      document.getElementById("hund1").innerHTML = "";
   }
-  function randTekst2(){
-    randNr = randTall();
-    console.log(randNr);
-    if(randNr==8){
+}
+function randTekst2(){
+  randNr = randTall();
+  if(randNr==8){
       document.getElementById("hund2").innerHTML = "Bichon Frise";
-    }else{
+  }else{
     document.getElementById("hund2").innerHTML = "";
-    }
   }
-  function randTekst3(){
-    randNr = randTall();
-    if(randNr==2){
-      document.getElementById("hund3").innerHTML = "Alaskan Malamute";
-    }else{
+}
+function randTekst3(){
+  randNr = randTall();
+  if(randNr==2){
+    document.getElementById("hund3").innerHTML = "Alaskan Malamute";
+  }else{
     document.getElementById("hund3").innerHTML = "";
-    }
   }
-  function randTekst4(){
-     randNr = randTall();
-    if(randNr==9){
+}
+function randTekst4(){
+  randNr = randTall();
+  if(randNr==9){
       document.getElementById("hund4").innerHTML = "Saint Bernard";
-    }else{
+  }else{
     document.getElementById("hund4").innerHTML = "";
-    }
   }
-   function randTekst5(){
-     randNr = randTall();
-    if(randNr==6){
+}
+function randTekst5(){
+  randNr = randTall();
+  if(randNr==6){
       document.getElementById("hund5").innerHTML = "Chow chow";
-    }else{
+  }else{
     document.getElementById("hund5").innerHTML = "";
-    }
   }
-  function randTekst6(){
-     randNr = randTall();
-    if(randNr==3){
+}
+function randTekst6(){
+  randNr = randTall();
+  if(randNr==3){
       document.getElementById("hund6").innerHTML = "Border Collie";
-    }else{
+  }else{
     document.getElementById("hund6").innerHTML = "";
-    }
   }
+}
   setInterval(randTekst1, 1100);
   setInterval(randTekst, 1000);
   setInterval(randTekst2, 1000);
@@ -114,6 +114,32 @@
   setInterval(randTekst4, 1000);
   setInterval(randTekst5, 600);
   setInterval(randTekst6, 800);
+//Funksjoen sjekker om user input er det samme som kodeordet
+function kodeord(){
+  var kodenavn = prompt("Vennligst gi kodeordet");
+  if (kodenavn.toUpperCase() == "RAGDOLL") {
+     window.location.href = "seier.html";
+  }else if(kodenavn.toUpperCase() == "DEFERRISE"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "LOXODROME"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "RADIESTHESIA"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "ABTHANE"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "GEMMATE"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "LAEOTROPIC"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.toUpperCase() == "OGDOAD"){
+    alert("Dette ordet kan du bruke til å løse koden!")
+  }else if(kodenavn.length>7){
+    alert("Kodenavnet er altfor langt til å være riktig")
+  }
+  else{
+    alert("Ikke riktig!");
+  }
+}
   </script>
-  </body>
+</body>
 </html>

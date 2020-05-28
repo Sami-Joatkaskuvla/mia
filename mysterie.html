@@ -7,22 +7,35 @@
     <link rel="stylesheet" href="klikke4.css" type="text/css" media="screen">
     <script type="text/javascript" src="include.js"></script>
   </head>
-  <body>
+  <body  id="restenbody">
   <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Meny</button>
   <div id="myDropdown" class="dropdown-content">
    <a href="fortsettelse.html">Fortsettelse</a>
     <a href="mysterie.html"> Mysterie </a>
+    <a href="hvilken.html"> Hvilken? </a>
+    <a href="oppskrift.html"> Oppskrift </a>
   </div>
 </div>
-<button onclick="tekstKlikk()" class="btn"> Klikk meg! </button>
+
+</br>
+<button onclick="tekstKlikk()" class="btn"> Klikk <span class="oransjeBokstav">m</span>eg! </button>
 <div id="kodeTekst"> </div>
+<div class="kodeskive">
+<canvas id="kodeCanvas" width="500px" height="700px"> </canvas>
+<canvas id="kodeCanvas1" width="500px" height="700px"> </canvas>
+<div class="container">
+  <div class="circTxt"></div>
+  
+</div></div>
+<div class="sirkelen"></div>
+<h3 class="skjultTekst"> Deferrise </h3>
 <script>
  
-
+//Funksjonen viser spesifikke ord ved spesifikke tidspunkt
 var kode = 0;
-function morse(){  
-console.log(kode);
+function morse(){ 
+ 
   if(kode == 3){
     document.getElementById("kodeTekst").innerHTML = "Kaktus";
     kode+=1;
@@ -78,7 +91,7 @@ console.log(kode);
     document.getElementById("kodeTekst").innerHTML = "Terracotta";
     kode+=1;
   }else if(kode<=84 && kode>=82){
-    document.getElementById("kodeTekst").innerHTML = "murstein";
+    document.getElementById("kodeTekst").innerHTML = "finn 107";
     kode+=1;
   }else if(kode == 87){
     document.getElementById("kodeTekst").innerHTML = "vann";
@@ -98,21 +111,56 @@ console.log(kode);
   }else if(kode<=114 && kode>=112){
     document.getElementById("kodeTekst").innerHTML = "eliksir";
     kode+=1;
-  }else if(kode<=120 && kode>=118){
+  }else if(kode==118){
     document.getElementById("kodeTekst").innerHTML = "Ovn";
     kode+=1;
+  }else if(kode==126){
+    location.reload();
   }
   else{
-  document.getElementById("kodeTekst").innerHTML = "";
-  kode+=1;
+    document.getElementById("kodeTekst").innerHTML = ".";
+    kode+=1;
   }
-  
 }
 function tekstKlikk(){
- setInterval(morse, 500);
+ setInterval(morse, 300);
 }
 
 
-</script>
+var canvas = document.getElementById('kodeCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 200;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'rgba(186,98,71,1)';
+      context.fill();
+   
+
+var tekst = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "æ", "ø", "å"];
+var txt = 0;
+   
+   var canvas1 = document.getElementById('kodeCanvas1');
+var context1 = canvas1.getContext('2d');
+      var centerX1 = canvas1.width / 2;
+      var centerY1 = canvas1.height / 2;
+      var radius1 = 150;
+    context1.beginPath();
+      context1.arc(centerX1, centerY1, radius1, 0, 2 * Math.PI, false);
+      context1.fillStyle = 'rgba(250,250,250,1)';
+      context1.fill();
+      context1.stroke();
+     
+       
+      for (txt = 0; txt<tekst.length; txt++){
+      context1.translate(250, 350);
+    context1.rotate(Math.PI / 14.5);
+    context1.translate(-250, -350);
+       context1.fillText(tekst[txt], 190, 190); 
+      }
+      
+</script> 
   </body>
 </html>
