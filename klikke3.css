@@ -1,0 +1,206 @@
+﻿body{
+background-color: black;
+  color: white; 
+font-family: Chiller;
+text-align: center;
+font-size: 40px;
+overflow: hidden;
+}
+
+.stjerne {
+  background: #5a63ff;
+  width: 30px;
+  height: 30px;
+  
+  position: relative;
+  top: -50px;
+  left: -20px;
+}
+.lys {
+background: #23ffe6;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -60px;
+  left: 1000px;
+}
+.stjerne {
+  background: #5a63ff;
+  width: 30px;
+  height: 30px;
+  
+  position: relative;
+  top: -70px;
+  left: -20px;
+}
+.lyset {
+background: #ff3434;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -100px;
+  left: 1000px;
+  border-radius: 50%;
+}
+.lyser {
+background: #7fff91;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -300px;
+  left: 1000px;
+  border-radius: 60%;
+}
+.farge1 {
+background: #45ff34;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -50px;
+  left: 500px;
+  border-radius: 60%;
+}
+.farge2 {
+background: #fff932;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  top: -500px;
+  left: 300px;
+  border-radius: 60%;
+}
+.farge3 {
+background: #ff5f37;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -400px;
+  left: 400px;
+  border-radius: 60%;
+}
+.farge4 {
+background: #b114ff;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: -70px;
+  left: 700px;
+  border-radius: 60%;
+}
+.farge5 {
+background: #41ff87;
+  width: 20px;
+  height: 30px;
+  position: relative;
+  top: -500px;
+  left: 200px;
+  border-radius: 60%;
+}
+.fargea {
+background: #b949b0;
+  width: 60px;
+  height: 50px;
+  position: relative;
+  top: -700px;
+  left: 40px;
+  border-radius: 60%;
+}
+.fargea1 {
+background: #75b8ff;
+  width: 90px;
+  height: 70px;
+  position: relative;
+  top: -800px;
+  left: 1200px;
+  border-radius: 60%;
+}
+.fargea2 {
+background: #ff1418;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -300px;
+  left: 400px;
+  border-radius: 60%;
+}
+.fargea3 {
+background: #bcff2a;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: -150px;
+  left: 450px;
+  border-radius: 60%;
+}
+.fargea4 {
+background: #dfdcff;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: -300px;
+  left: 200px;
+  border-radius: 60%;
+}
+.fargea5 {
+background: #0049ff;
+  width: 60px;
+  height: 50px;
+  position: relative;
+  top: -300px;
+  left: 150px;
+  border-radius: 60%;
+}
+.fargeb {
+background: #1eb909;
+  width: 60px;
+  height: 70px;
+  position: relative;
+  top: -350px;
+  left: 880px;
+  border-radius: 60%;
+}
+.fargeb1 {
+background: #ff4d8f;
+  width: 90px;
+  height: 70px;
+  position: relative;
+  top: -100px;
+  left: 1100px;
+  border-radius: 60%;
+}
+.fargeb2 {
+background: #043e89;
+  width: 90px;
+  height: 80px;
+  position: relative;
+  top: -800px;
+  left: 550px;
+  border-radius: 60%;
+}
+.fargeb3 {
+background: #ff6c0a;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  top: -600px;
+  left: 800px;
+  border-radius: 60%;
+}
+.fargeb4 {
+background: #ffb6e5;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -200px;
+  left: 500px;
+  border-radius: 60%;
+}
+.fargeb5 {
+background: #8e8815;
+  width: 80px;
+  height: 90px;
+  position: relative;
+  top: -700px;
+  left: 900px;
+  border-radius: 60%;
+}

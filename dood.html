@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title></title>
+    <link rel="stylesheet" href="klikke3.css" type="text/css" media="screen">
+  </head>
+<body>
+  <div class="stjerne"> </div>
+  <div class="lys"> </div>
+  <div class="lyset"> </div>
+  <div class="lyser"> </div>
+  <h1 class="ml3"> Du ble 80 år gammel </h1>
+  <h1 class="ml4"> Plutselig var alt borte </h1>
+  <h1 class="ml5"> Du var på vei til et nytt sted </h1>
+
+  <div class="farge"></div>
+  <div class="farge1"></div>
+  <div class="farge2"></div>
+  <div class="farge3"></div>
+  <div class="farge4"></div>
+  <div class="farge5"></div>
+
+  <div class="fargea"></div>
+  <div class="fargea1"></div>
+  <div class="fargea2"></div>
+  <div class="fargea3"></div>
+  <div class="fargea4"></div>
+  <div class="fargea5"></div>
+
+  <div class="fargeb"></div>
+  <div class="fargeb1"></div>
+  <div class="fargeb2"></div>
+  <div class="fargeb3"></div>
+  <div class="fargeb4"></div>
+  <div class="fargeb5"></div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ 
+<script>
+  var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: 1})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+var textWrapper1 = document.querySelector('.ml4');
+textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  
+anime.timeline({loop: 1})
+  .add({
+    targets: '.ml4 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2200,
+    delay: (el, i) => 150 * (i+40)
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 10000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+var textWrapper2 = document.querySelector('.ml5');
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  
+anime.timeline({loop: 1})
+  .add({
+    targets: '.ml5 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2200,
+    delay: (el, i) => 150 * (i+100)
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 10000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+anime.timeline({loop: true})
+  .add({
+    targets: ['.farge', '.farge1', '.farge2', '.farge3', '.farge4', '.farge5'],
+    opacity: [0,0.7],
+    easing: "easeInOutQuad",
+    duration: 2200,
+    delay: (el, i) => 2500 * (i+10)
+  }).add({
+    targets: ['.farge', '.farge1', '.farge2', '.farge3', '.farge4', '.farge5'],
+    opacity: 0,
+    duration: 10000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+anime.timeline({loop: true})
+  .add({
+    targets: ['.fargea', '.fargea1', '.fargea2', '.fargea3', '.fargea4', '.fargea5'],
+    opacity: [0,0.7],
+    easing: "easeInOutQuad",
+    duration: 3000,
+    delay: (el, i) => 2700 * (i+10)
+  }).add({
+    targets: ['.fargea', '.fargea1', '.fargea2', '.fargea3', '.fargea4', '.fargea5'],
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 2000
+  });
+anime.timeline({loop: true})
+  .add({
+    targets: ['.fargeb', '.fargeb1', '.fargeb2', '.fargeb3', '.fargeb4', '.fargeb5'],
+    opacity: [0,0.7],
+    easing: "easeInOutQuad",
+    duration: 3000,
+    delay: (el, i) => 2650 * (i+10)
+  }).add({
+    targets: ['.fargeb', '.fargeb1', '.fargeb2', '.fargeb3', '.fargeb4', '.fargeb5'],
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 2000
+  });
+ var tid = 0;
+ //Funkjsonen gjør at personen sendes til en ny nettside
+function timer(){
+    tid++
+    if(tid == 45){
+      window.location.href = "fortsettelse.html";
+    }else{}
+}
+  setInterval(timer, 1000);
+</script>
+  
+</body>
+</html>
